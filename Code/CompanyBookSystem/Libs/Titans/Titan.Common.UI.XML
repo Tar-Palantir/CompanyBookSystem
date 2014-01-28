@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Titan.Common.UI</name>
+    </assembly>
+    <members>
+        <member name="T:Titan.Common.UI.Attributes.IgnoreAuthorityAttribute">
+            <summary>
+            忽略权限检查特性
+            </summary>
+        </member>
+        <member name="M:Titan.Common.UI.Attributes.IgnoreAuthorityAttribute.#ctor(Titan.Common.UI.Attributes.IgnoreType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ignoreType"></param>
+        </member>
+        <member name="M:Titan.Common.UI.Attributes.IgnoreAuthorityAttribute.#ctor(Titan.Common.UI.Attributes.IgnoreType,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ignoreType"></param>
+            <param name="sameActionName"></param>
+        </member>
+        <member name="P:Titan.Common.UI.Attributes.IgnoreAuthorityAttribute.IgnoreType">
+            <summary>
+            忽略类型
+            </summary>
+        </member>
+        <member name="P:Titan.Common.UI.Attributes.IgnoreAuthorityAttribute.SameControllerName">
+            <summary>
+            和某个action验证方式相同时使用的Controller名称
+            </summary>
+        </member>
+        <member name="P:Titan.Common.UI.Attributes.IgnoreAuthorityAttribute.SameActionName">
+            <summary>
+            和某个action验证方式相同时使用的action名称
+            </summary>
+        </member>
+        <member name="T:Titan.Common.UI.Attributes.IgnoreType">
+            <summary>
+            权限检查忽略类型
+            </summary>
+        </member>
+        <member name="F:Titan.Common.UI.Attributes.IgnoreType.IgnoreLogon">
+            <summary>
+            忽略登录验证
+            </summary>
+        </member>
+        <member name="F:Titan.Common.UI.Attributes.IgnoreType.IgnoreFeature">
+            <summary>
+            忽略功能项验证
+            </summary>
+        </member>
+        <member name="F:Titan.Common.UI.Attributes.IgnoreType.SameAs">
+            <summary>
+            和某一个Action的权限一样
+            </summary>
+        </member>
+        <member name="T:ITS.Government.Common.UI.BasePage">
+            <summary>
+            基础页面
+            </summary>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.OnPreInit(System.EventArgs)">
+            <summary>
+            设置页面主题
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.OnInit(System.EventArgs)">
+            <summary>
+            重写初始化方法
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.CheckUrlParam">
+            <summary>
+            检查Url参数是否写请求一样,true正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.GetQueryValue(System.String,System.Decimal)">
+            <summary>
+            获得查询字符串值
+            </summary>
+            <param name="paramStr">参数名</param>
+            <param name="defValue">默认值</param>
+            <returns>获取失败返回默认值</returns>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.GetQueryValue(System.String,System.Int32)">
+            <summary>
+            获得查询字符串值
+            </summary>
+            <param name="paramStr">参数名</param>
+            <param name="defValue">默认值</param>
+            <returns>获取失败返回默认值</returns>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.GetQueryValue(System.String,System.String)">
+            <summary>
+            获得查询字符串值
+            </summary>
+            <param name="paramStr">参数名</param>
+            <param name="defValue">默认值</param>
+            <returns>获取失败返回默认值</returns>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.GetQueryValue(System.String,System.Guid)">
+            <summary>
+            获得查询字符串值
+            </summary>
+            <param name="paramStr">参数名</param>
+            <param name="defValue">默认值</param>
+            <returns>获取失败返回默认值</returns>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.SetReadOnly(System.Web.UI.Control)">
+            <summary>
+            设置页面控件为只读
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:ITS.Government.Common.UI.BasePage.StripHTML(System.String)">
+            <summary>
+            过滤脚本
+            </summary>
+            <param name="strHtml"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.UI.MVC.BaseServiceModel`2">
+            <summary>
+            服务模型的基类
+            </summary>
+            <typeparam name="TContract">服务契约</typeparam>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.Create(`1,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            创建业务对象
+            </summary>
+            <param name="model">需要创建的业务对象的模型</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.Create(Titan.Common.UI.MVC.IBaseModel,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            创建业务对象
+            </summary>
+            <param name="model">需要创建的业务对象的模型</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.Update(`1,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            修改业务对象
+            </summary>
+            <param name="model">需要修改的业务对象的模型</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.Update(Titan.Common.UI.MVC.IBaseModel,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            修改业务对象
+            </summary>
+            <param name="model">需要修改的业务对象的模型</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.Save(Titan.Common.UI.MVC.IBaseModel,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            保存业务对象
+            </summary>
+            <param name="model">创建Or修改的业务对象</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.Delete(System.Guid,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            删除业务对象
+            </summary>
+            <param name="id">需要删除的业务对象ID</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.GetById``1(System.Guid)">
+            <summary>
+            获取一个业务对象
+            </summary>
+            <param name="id">业务对象ID</param>
+            <returns>业务对象</returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.GetById(System.Guid)">
+            <summary>
+            获取一个业务对象
+            </summary>
+            <param name="id">业务对象ID</param>
+            <returns>业务对象</returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.GetAll``1">
+            <summary>
+            获取所有模型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.GetAll">
+            <summary>
+            获取所有模型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.QuickQuery(Titan.Common.DataAccess.Entities.QuickQueryParam)">
+            <summary>
+            根据查询参数执行快速查询，并生成分页信息
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <returns>业务对象查询结果</returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.ConvertToModel``1(`1)">
+            <summary>
+            将实体转换为模型
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseServiceModel`2.ConvertToEntity(Titan.Common.UI.MVC.IBaseModel)">
+            <summary>
+            将模型转换为实体
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.UI.MVC.IBaseModel">
+            <summary>
+            所有模型类的基接口
+            </summary>
+        </member>
+        <member name="P:Titan.Common.UI.MVC.IBaseModel.IsUpdate">
+            <summary>
+            是否为修改
+            </summary>
+        </member>
+        <member name="T:Titan.Common.UI.MVC.BaseController">
+            <summary>
+            MVC基础Controller
+            </summary>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.Initialize(System.Web.Routing.RequestContext)">
+            <summary>
+            初始化
+            </summary>
+            <param name="requestContext"></param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            Action开始执行
+            验证用户功能项权限
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            Action执行完毕
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.OnResultExecuting(System.Web.Mvc.ResultExecutingContext)">
+            <summary>
+            开始执行Action的返回结果
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.OnResultExecuted(System.Web.Mvc.ResultExecutedContext)">
+            <summary>
+            Action的返回结果执行完毕
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            出现了异常
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.JsonForGrid``1(Titan.Common.DataAccess.Entities.PagedResults{``0})">
+             <summary>
+            将分页后的查询结果转换为供Grid使用的Json对象
+             </summary>
+             <param name="pagedResults"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.JsonReferenceObjectForGrid``1(Titan.Common.DataAccess.Entities.PagedResults{``0})">
+            <summary>
+            将分页后的查询结果转换为供Grid使用的Json对象(复杂对象)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pagedResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.JsonForGrid``1(System.Collections.Generic.IList{``0})">
+             <summary>
+            将查询结果转换为供Grid使用的Json对象
+             </summary>
+             <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.JsonForGrid``1(System.Collections.Generic.IList{``0},System.Boolean)">
+             <summary>
+            将查询结果转换为供Grid使用的Json对象
+             </summary>
+             <param name="data"></param>
+            <param name="loadonce">是否一次性加载</param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.JsonForStatus(Titan.Common.DataStatus.OperateStatus)">
+            <summary>
+            将操作状态转换为Json对象
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.Json(Titan.Common.DataStatus.OperateStatus)">
+            <summary>
+            将操作状态转换为Json对象
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseController.VerifyCode">
+            <summary>
+            获取验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Titan.Common.UI.MVC.BaseController.CurrentUser">
+            <summary>
+            获取当前用户
+            </summary>
+            <remarks>定义为虚属性，便于子类在调试时设置不同的用户</remarks>
+        </member>
+        <member name="T:Titan.Common.UI.MVC.GetAllServiceModel`2">
+            <summary>
+            允许获取所有对象的实体的服务模型
+            </summary>
+            <typeparam name="TContract"></typeparam>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.GetAllServiceModel`2.GetAll``1">
+            <summary>
+            获取所有模型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.UI.Attributes.VerifyCodeAttribute">
+            <summary>
+            验证码输入验证特性
+            </summary>
+        </member>
+        <member name="M:Titan.Common.UI.Attributes.VerifyCodeAttribute.IsValid(System.Object)">
+            <summary>
+            判断输入的验证码值是否有效性
+            </summary>
+            <param name="value">输入的验证码值</param>
+            <returns>True:有效，False:错误</returns>
+        </member>
+        <member name="T:Titan.Common.UI.MVC.HtmlExtensions">
+            <summary>
+            Html扩展方法
+            </summary>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.HtmlExtensions.VerifyCode(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            创建验证码图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.HtmlExtensions.CurrentUser(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            获取当前用户
+            </summary>
+            <param name="htmlHelper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.HtmlExtensions.Script(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            根据系统配置中的脚本名称生成脚本引用
+            </summary>
+            <param name="html">htmlHelper</param>
+            <param name="scriptName">脚本名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.HtmlExtensions.Stylesheet(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            根据系统配置中的样式表名称生成样式引用
+            </summary>
+            <param name="html"></param>
+            <param name="stylesheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.HtmlExtensions.ConvertList2JsArray(System.Web.Mvc.HtmlHelper,System.Collections.IList)">
+            <summary>
+            将列表转换为js数组的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.HtmlExtensions.QuoteString(System.String)">
+            <summary>
+            处理字符串中的转移字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.UI.ModelStateExtensions">
+            <summary>
+            模型状态验证
+            </summary>
+        </member>
+        <member name="M:Titan.Common.UI.ModelStateExtensions.IsValid(System.Web.Mvc.ModelStateDictionary,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            验证模型状态，并将错误信息返回到operateStatus中
+            </summary>
+            <param name="modelStateDictionary"></param>
+            <param name="operateStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.Alert(System.Web.UI.Page,System.String)">
+            <summary>
+            服务器弹出对话框
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.Alert(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            服务器弹出对话框并重定向页面
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+            <param name="url">关闭对话框后跳转页面的url</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.ReloadParent(System.Web.UI.Page,System.String)">
+            <summary>
+            弹出对话框并刷新父页
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.ReloadParent(System.Web.UI.Page)">
+            <summary>
+            弹出对话框并刷新父页
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.ReloadFrame(System.Web.UI.Page,System.String)">
+            <summary>
+            指定框架页面刷新
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="frameName">框架名称</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.ReloadFrame(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            指定框架页面跳转
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="frameName">框架名称</param>
+            <param name="url">框架页跳转的url</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.AlertAndReloadFrame(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            弹出窗口并刷新框架页面
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+            <param name="frameName">框架名称</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.AlertAndReloadOpener(System.Web.UI.Page,System.String)">
+            <summary>
+            弹出对话框关闭弹出窗口并刷新父页
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.AlertAndRedrictOpener(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            弹出对话框关闭窗口并重定向父页
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+            <param name="url">重定向页面url</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.AlertAndRedrictPage(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            弹出对话框并重定向页面
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+            <param name="url">重定向页面url</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.AlertAndClose(System.Web.UI.Page,System.String)">
+            <summary>
+            弹出对话框并关闭窗口
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="message">对话框显示的信息</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.Close(System.Web.UI.Page)">
+            <summary>
+            关闭窗口
+            </summary>
+            <param name="page">请求的页面</param>
+        </member>
+        <member name="M:Titan.Common.UI.WebForm.Dialog.OpenWindow(System.Web.UI.Page,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            服务器弹出窗口
+            </summary>
+            <param name="page">请求的页面</param>
+            <param name="url">弹出窗口的url</param>
+            <param name="windowName">弹出窗口名称</param>
+            <param name="parameters">参数列表</param>
+            <param name="replace">是否替换已打开窗口</param>
+        </member>
+        <member name="T:Titan.Common.UI.MVC.BaseMvcApplication">
+            <summary>
+            所有WEB站点应用程序的基类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseMvcApplication.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            注册路由
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="M:Titan.Common.UI.MVC.BaseMvcApplication.Application_Start">
+            <summary>
+            应用程序启动
+            </summary>
+        </member>
+    </members>
+</doc>

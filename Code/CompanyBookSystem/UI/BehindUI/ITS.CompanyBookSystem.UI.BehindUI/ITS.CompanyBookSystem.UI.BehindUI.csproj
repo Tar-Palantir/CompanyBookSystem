@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19E0D19A-2A83-4FEC-B190-0CABBFCEA578}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITS.CompanyBookSystem.UI.BehindUI</RootNamespace>
+    <AssemblyName>ITS.CompanyBookSystem.UI.BehindUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BeITMemcached">
+      <HintPath>..\..\..\Libs\BeITMemcached\BeITMemcached.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicQuery">
+      <HintPath>..\..\..\Libs\DynamicQuery\DynamicQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Libs\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Microsoft.Practices\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\..\Libs\Microsoft.Practices\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Titan.Common.Business.Implement">
+      <HintPath>..\..\..\Libs\Titans\Titan.Common.Business.Implement.dll</HintPath>
+    </Reference>
+    <Reference Include="Titan.Common.Business.Interface">
+      <HintPath>..\..\..\Libs\Titans\Titan.Common.Business.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Titan.Common.DataAccess.Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Titans\Titan.Common.DataAccess.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Titan.Common.DataAccess.Implement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Titans\Titan.Common.DataAccess.Implement.dll</HintPath>
+    </Reference>
+    <Reference Include="Titan.Common.DataAccess.Interface">
+      <HintPath>..\..\..\Libs\Titans\Titan.Common.DataAccess.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Titan.Common.DataStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Titans\Titan.Common.DataStatus.dll</HintPath>
+    </Reference>
+    <Reference Include="Titan.Common.UI">
+      <HintPath>..\..\..\Libs\Titans\Titan.Common.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BookObjectController.cs" />
+    <Compile Include="Controllers\BookObjectTypeController.cs" />
+    <Compile Include="Controllers\BookRecordsController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ObjectStyleController.cs" />
+    <Compile Include="Controllers\PersonsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\UserIdentityHelper.cs" />
+    <Compile Include="Models\BookSystemBaseModel.cs" />
+    <Compile Include="Models\BookObjectModel.cs" />
+    <Compile Include="Models\BookObjectTypeModel.cs" />
+    <Compile Include="Models\BookRecordsModel.cs" />
+    <Compile Include="Models\DepartmentsModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ObjectStyleModel.cs" />
+    <Compile Include="Models\PersonsModel.cs" />
+    <Compile Include="Models\UsersModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\form.css" />
+    <Content Include="Content\Styles\icon.css" />
+    <Content Include="Content\Styles\icons\16_excel.gif" />
+    <Content Include="Content\Styles\icons\16_export.gif" />
+    <Content Include="Content\Styles\icons\16_find.gif" />
+    <Content Include="Content\Styles\icons\16_L_remove.gif" />
+    <Content Include="Content\Styles\icons\16_print.gif" />
+    <Content Include="Content\Styles\icons\18_addView.gif" />
+    <Content Include="Content\Styles\icons\alert.png" />
+    <Content Include="Content\Styles\icons\app_titlebar_hover.gif" />
+    <Content Include="Content\Styles\icons\back.png" />
+    <Content Include="Content\Styles\icons\blank.gif" />
+    <Content Include="Content\Styles\icons\btnclickchoose.png" />
+    <Content Include="Content\Styles\icons\calendar.gif" />
+    <Content Include="Content\Styles\icons\cancel.png" />
+    <Content Include="Content\Styles\icons\cut.png" />
+    <Content Include="Content\Styles\icons\edit_add.png" />
+    <Content Include="Content\Styles\icons\edit_remove.png" />
+    <Content Include="Content\Styles\icons\export.png" />
+    <Content Include="Content\Styles\icons\filesave.png" />
+    <Content Include="Content\Styles\icons\fileuploaded.png" />
+    <Content Include="Content\Styles\icons\fragment-7.gif" />
+    <Content Include="Content\Styles\icons\help.png" />
+    <Content Include="Content\Styles\icons\icn_help16.png" />
+    <Content Include="Content\Styles\icons\icon-listview.gif" />
+    <Content Include="Content\Styles\icons\icon_67.gif" />
+    <Content Include="Content\Styles\icons\ico_16_1001.gif" />
+    <Content Include="Content\Styles\icons\ico_16_1085.gif" />
+    <Content Include="Content\Styles\icons\ico_16_141.gif" />
+    <Content Include="Content\Styles\icons\ico_16_4002.gif" />
+    <Content Include="Content\Styles\icons\ico_16_4700.gif" />
+    <Content Include="Content\Styles\icons\ico_16_delete.gif" />
+    <Content Include="Content\Styles\icons\ico_16_importCustomizations.gif" />
+    <Content Include="Content\Styles\icons\ico_16_taks.gif" />
+    <Content Include="Content\Styles\icons\ico_18_4424.gif" />
+    <Content Include="Content\Styles\icons\ico_18_role_b.gif" />
+    <Content Include="Content\Styles\icons\ico_18_role_g.gif" />
+    <Content Include="Content\Styles\icons\ico_Arrow_R.gif" />
+    <Content Include="Content\Styles\icons\ico_lArrow.gif" />
+    <Content Include="Content\Styles\icons\ico_syshealth_24x24.gif" />
+    <Content Include="Content\Styles\icons\lookupOff.gif" />
+    <Content Include="Content\Styles\icons\marketing_24x24.gif" />
+    <Content Include="Content\Styles\icons\mergeduplicates.gif" />
+    <Content Include="Content\Styles\icons\mnudown.gif" />
+    <Content Include="Content\Styles\icons\mnu_hSpacerGrid.gif" />
+    <Content Include="Content\Styles\icons\new.GIF" />
+    <Content Include="Content\Styles\icons\no.png" />
+    <Content Include="Content\Styles\icons\nofile.png" />
+    <Content Include="Content\Styles\icons\ok.png" />
+    <Content Include="Content\Styles\icons\password.gif" />
+    <Content Include="Content\Styles\icons\pencil.png" />
+    <Content Include="Content\Styles\icons\print.png" />
+    <Content Include="Content\Styles\icons\qfind.gif" />
+    <Content Include="Content\Styles\icons\redo.png" />
+    <Content Include="Content\Styles\icons\reload.png" />
+    <Content Include="Content\Styles\icons\resourcecenter_24x24.gif" />
+    <Content Include="Content\Styles\icons\sales_24x24.gif" />
+    <Content Include="Content\Styles\icons\save.GIF" />
+    <Content Include="Content\Styles\icons\saveClose.gif" />
+    <Content Include="Content\Styles\icons\saveOpen.gif" />
+    <Content Include="Content\Styles\icons\search.png" />
+    <Content Include="Content\Styles\icons\services_24x24.gif" />
+    <Content Include="Content\Styles\icons\SetRegarding.gif" />
+    <Content Include="Content\Styles\icons\settings_24x24.gif" />
+    <Content Include="Content\Styles\icons\sum.png" />
+    <Content Include="Content\Styles\icons\system\role.jpg" />
+    <Content Include="Content\Styles\icons\tip.png" />
+    <Content Include="Content\Styles\icons\toolbar_refresh.gif" />
+    <Content Include="Content\Styles\icons\undo.png" />
+    <Content Include="Content\Styles\icons\upload.png" />
+    <Content Include="Content\Styles\icons\workplace_24x24.gif" />
+    <Content Include="Content\Styles\images\button\button-add.gif" />
+    <Content Include="Content\Styles\images\button\button-s.gif" />
+    <Content Include="Content\Styles\images\button\button-search.gif" />
+    <Content Include="Content\Styles\images\button\button1.gif" />
+    <Content Include="Content\Styles\images\button\button2.gif" />
+    <Content Include="Content\Styles\images\button\button_10.jpg" />
+    <Content Include="Content\Styles\images\button\button_11.jpg" />
+    <Content Include="Content\Styles\images\content_bg.jpg" />
+    <Content Include="Content\Styles\images\header_bg_90.PNG" />
+    <Content Include="Content\Styles\images\loading2.gif" />
+    <Content Include="Content\Styles\images\white-top-bottom.gif" />
+    <Content Include="Content\Styles\login.css" />
+    <Content Include="Content\themes\Default\default.css" />
+    <Content Include="Content\themes\Default\easyui.css" />
+    <Content Include="Content\themes\Default\images\accordion_collapse.png" />
+    <Content Include="Content\themes\Default\images\accordion_expand.png" />
+    <Content Include="Content\themes\Default\images\alert.png" />
+    <Content Include="Content\themes\Default\images\bar_line.gif" />
+    <Content Include="Content\themes\Default\images\blank.gif" />
+    <Content Include="Content\themes\Default\images\button_a_bg.gif" />
+    <Content Include="Content\themes\Default\images\button_plain_hover.png" />
+    <Content Include="Content\themes\Default\images\button_span_bg.gif" />
+    <Content Include="Content\themes\Default\images\calendar_nextmonth.gif" />
+    <Content Include="Content\themes\Default\images\calendar_nextyear.gif" />
+    <Content Include="Content\themes\Default\images\calendar_prevmonth.gif" />
+    <Content Include="Content\themes\Default\images\calendar_prevyear.gif" />
+    <Content Include="Content\themes\Default\images\combo_arrow.gif" />
+    <Content Include="Content\themes\Default\images\datagrid_header_bg.gif" />
+    <Content Include="Content\themes\Default\images\datagrid_row_collapse.gif" />
+    <Content Include="Content\themes\Default\images\datagrid_row_expand.gif" />
+    <Content Include="Content\themes\Default\images\datagrid_sort_asc.gif" />
+    <Content Include="Content\themes\Default\images\datagrid_sort_desc.gif" />
+    <Content Include="Content\themes\Default\images\datagrid_title_bg.png" />
+    <Content Include="Content\themes\Default\images\datebox_arrow.png" />
+    <Content Include="Content\themes\Default\images\form_toolbar_back.gif" />
+    <Content Include="Content\themes\Default\images\layout_button_down.gif" />
+    <Content Include="Content\themes\Default\images\layout_button_left.gif" />
+    <Content Include="Content\themes\Default\images\layout_button_right.gif" />
+    <Content Include="Content\themes\Default\images\layout_button_up.gif" />
+    <Content Include="Content\themes\Default\images\menu.gif" />
+    <Content Include="Content\themes\Default\images\menu_downarrow.png" />
+    <Content Include="Content\themes\Default\images\menu_rightarrow.png" />
+    <Content Include="Content\themes\Default\images\menu_sep.png" />
+    <Content Include="Content\themes\Default\images\menu_split_downarrow.png" />
+    <Content Include="Content\themes\Default\images\messager_error.gif" />
+    <Content Include="Content\themes\Default\images\messager_info.gif" />
+    <Content Include="Content\themes\Default\images\messager_question.gif" />
+    <Content Include="Content\themes\Default\images\messager_warning.gif" />
+    <Content Include="Content\themes\Default\images\pagination_first.gif" />
+    <Content Include="Content\themes\Default\images\pagination_last.gif" />
+    <Content Include="Content\themes\Default\images\pagination_load.png" />
+    <Content Include="Content\themes\Default\images\pagination_loading.gif" />
+    <Content Include="Content\themes\Default\images\pagination_next.gif" />
+    <Content Include="Content\themes\Default\images\pagination_prev.gif" />
+    <Content Include="Content\themes\Default\images\panel_loading.gif" />
+    <Content Include="Content\themes\Default\images\panel_title.png" />
+    <Content Include="Content\themes\Default\images\panel_tools.gif" />
+    <Content Include="Content\themes\Default\images\panel_tool_collapse.gif" />
+    <Content Include="Content\themes\Default\images\panel_tool_expand.gif" />
+    <Content Include="Content\themes\Default\images\searchbox_button.png" />
+    <Content Include="Content\themes\Default\images\spinner_arrow_down.gif" />
+    <Content Include="Content\themes\Default\images\spinner_arrow_up.gif" />
+    <Content Include="Content\themes\Default\images\statusbar_back.gif" />
+    <Content Include="Content\themes\Default\images\tabs_active.png" />
+    <Content Include="Content\themes\Default\images\tabs_close.gif" />
+    <Content Include="Content\themes\Default\images\tabs_enabled.png" />
+    <Content Include="Content\themes\Default\images\tabs_leftarrow.png" />
+    <Content Include="Content\themes\Default\images\tabs_rightarrow.png" />
+    <Content Include="Content\themes\Default\images\tree_arrows.gif" />
+    <Content Include="Content\themes\Default\images\tree_checkbox_0.gif" />
+    <Content Include="Content\themes\Default\images\tree_checkbox_1.gif" />
+    <Content Include="Content\themes\Default\images\tree_checkbox_2.gif" />
+    <Content Include="Content\themes\Default\images\tree_dnd_no.png" />
+    <Content Include="Content\themes\Default\images\tree_dnd_yes.png" />
+    <Content Include="Content\themes\Default\images\tree_file.gif" />
+    <Content Include="Content\themes\Default\images\tree_folder.gif" />
+    <Content Include="Content\themes\Default\images\tree_folder_open.gif" />
+    <Content Include="Content\themes\Default\images\tree_loading.gif" />
+    <Content Include="Content\themes\Default\images\validatebox_pointer.gif" />
+    <Content Include="Content\themes\Default\images\validatebox_warning.png" />
+    <Content Include="Content\themes\login\images\bg.bak.png" />
+    <Content Include="Content\themes\login\images\bg.png" />
+    <Content Include="Content\themes\login\images\box_bg.bak.png" />
+    <Content Include="Content\themes\login\images\box_bg.png" />
+    <Content Include="Content\themes\login\images\btn.png" />
+    <Content Include="Content\themes\login\images\txt_bg.gif" />
+    <Content Include="Content\themes\login\login.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\DatePicker\calendar.js" />
+    <Content Include="Scripts\DatePicker\config.js" />
+    <Content Include="Scripts\DatePicker\lang\en.js" />
+    <Content Include="Scripts\DatePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\DatePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\DatePicker\My97DatePicker.htm" />
+    <Content Include="Scripts\DatePicker\skin\blue\bg.jpg" />
+    <Content Include="Scripts\DatePicker\skin\blue\btnbg.jpg" />
+    <Content Include="Scripts\DatePicker\skin\blue\datepicker.css" />
+    <Content Include="Scripts\DatePicker\skin\blue\down.jpg" />
+    <Content Include="Scripts\DatePicker\skin\blue\left.gif" />
+    <Content Include="Scripts\DatePicker\skin\blue\navLeft.gif" />
+    <Content Include="Scripts\DatePicker\skin\blue\navRight.gif" />
+    <Content Include="Scripts\DatePicker\skin\blue\qs.jpg" />
+    <Content Include="Scripts\DatePicker\skin\blue\right.gif" />
+    <Content Include="Scripts\DatePicker\skin\blue\up.jpg" />
+    <Content Include="Scripts\DatePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\DatePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\DatePicker\skin\default\img.gif" />
+    <Content Include="Scripts\DatePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\easyloader.js" />
+    <Content Include="Scripts\easyui-lang-zh_CN.js" />
+    <Content Include="Scripts\easyui_helper.js" />
+    <Content Include="Scripts\jquery-1.6.min.js" />
+    <Content Include="Scripts\jquery.easyui.min.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\validator.extend.js" />
+    <Content Include="Views\BookObjectType\Index.aspx" />
+    <Content Include="Views\BookObject\Index.aspx" />
+    <Content Include="Views\BookRecords\Update.aspx" />
+    <Content Include="Views\BookRecords\Detail.aspx" />
+    <Content Include="Views\BookRecords\Index.aspx" />
+    <Content Include="Views\Departments\Index.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Logon.aspx" />
+    <Content Include="Views\ObjectStyle\Index.aspx" />
+    <Content Include="Views\Persons\Index.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Business\ITS.CompanyBookSystem.Business.Implement\ITS.CompanyBookSystem.Business.Implement.csproj">
+      <Project>{A7DEC54C-74B8-4512-B65F-87060E5A7C8B}</Project>
+      <Name>ITS.CompanyBookSystem.Business.Implement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Business\ITS.CompanyBookSystem.Business.Interface\ITS.CompanyBookSystem.Business.Interface.csproj">
+      <Project>{D3FB99ED-3641-4D58-AAEB-6CBC8DF6A1E6}</Project>
+      <Name>ITS.CompanyBookSystem.Business.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DataAccess\ITS.CompanyBookSystem.DataAccess.Entity\ITS.CompanyBookSystem.DataAccess.Entity.csproj">
+      <Project>{41E3B397-E8EB-4BC8-862D-14FFF29AC45F}</Project>
+      <Name>ITS.CompanyBookSystem.DataAccess.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DataAccess\ITS.CompanyBookSystem.DataAccess.Implement\ITS.CompanyBookSystem.DataAccess.Implement.csproj">
+      <Project>{7AD59268-2C5F-4974-BCC6-F85960B087BB}</Project>
+      <Name>ITS.CompanyBookSystem.DataAccess.Implement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DataMaster.Master" />
+    <Content Include="Views\Shared\ViewMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BusinessIoc.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataChange.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3896</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

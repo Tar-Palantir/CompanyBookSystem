@@ -1,0 +1,289 @@
+
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+/* 表名: Users*/
+BEGIN TRANSACTION
+Go
+CREATE TABLE dbo.Users(
+    Id uniqueidentifier  NOT NULL
+    ,LoginName nvarchar(20)  NOT NULL
+    ,[Password] nvarchar(20)  NOT NULL
+    ,RealName nvarchar(20)  NOT NULL
+    ,Tel nvarchar(20)  NOT NULL
+    ,Email nvarchar(100)  NOT NULL
+    ,Describe nvarchar(200)  NULL
+    ,[State] int  NOT NULL
+    )  ON [PRIMARY]
+Go
+ALTER TABLE dbo.Users ADD CONSTRAINT
+PK_Users PRIMARY KEY CLUSTERED (
+Id
+) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+Go
+DECLARE @v sql_variant 
+SET @v = N'Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'Id'
+Go
+DECLARE @v sql_variant 
+SET @v = N'登录名'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'LoginName'
+Go
+DECLARE @v sql_variant 
+SET @v = N'密码'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'[Password]'
+Go
+DECLARE @v sql_variant 
+SET @v = N'真实姓名'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'RealName'
+Go
+DECLARE @v sql_variant 
+SET @v = N'联系电话'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'Tel'
+Go
+DECLARE @v sql_variant 
+SET @v = N'邮箱'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'Email'
+Go
+DECLARE @v sql_variant 
+SET @v = N'描述'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'Describe'
+Go
+DECLARE @v sql_variant 
+SET @v = N'数据状态'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Users', N'COLUMN', N'[State]'
+Go
+
+Commit
+/* 表名: BookObjectType*/
+BEGIN TRANSACTION
+Go
+CREATE TABLE dbo.BookObjectType(
+    Id uniqueidentifier  NOT NULL
+    ,Name nvarchar(20)  NOT NULL
+    ,Describe nvarchar(200)  NULL
+    ,[State] int  NOT NULL
+    )  ON [PRIMARY]
+Go
+ALTER TABLE dbo.BookObjectType ADD CONSTRAINT
+PK_BookObjectType PRIMARY KEY CLUSTERED (
+Id
+) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+Go
+DECLARE @v sql_variant 
+SET @v = N'Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObjectType', N'COLUMN', N'Id'
+Go
+DECLARE @v sql_variant 
+SET @v = N'对象类型名称'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObjectType', N'COLUMN', N'Name'
+Go
+DECLARE @v sql_variant 
+SET @v = N'对象类型描述'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObjectType', N'COLUMN', N'Describe'
+Go
+DECLARE @v sql_variant 
+SET @v = N'数据状态'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObjectType', N'COLUMN', N'[State]'
+Go
+
+Commit
+/* 表名: BookObject*/
+BEGIN TRANSACTION
+Go
+CREATE TABLE dbo.BookObject(
+    Id uniqueidentifier  NOT NULL
+    ,Name nvarchar(20)  NOT NULL
+    ,BookObjectTypeId uniqueidentifier  NOT NULL
+    ,Location nvarchar(50)  NOT NULL
+    ,Describe nvarchar(200)  NULL
+    ,[State] int  NOT NULL
+    )  ON [PRIMARY]
+Go
+ALTER TABLE dbo.BookObject ADD CONSTRAINT
+PK_BookObject PRIMARY KEY CLUSTERED (
+Id
+) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+Go
+DECLARE @v sql_variant 
+SET @v = N'Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObject', N'COLUMN', N'Id'
+Go
+DECLARE @v sql_variant 
+SET @v = N'对象名称'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObject', N'COLUMN', N'Name'
+Go
+DECLARE @v sql_variant 
+SET @v = N'对象类型Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObject', N'COLUMN', N'BookObjectTypeId'
+Go
+DECLARE @v sql_variant 
+SET @v = N'所在位置'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObject', N'COLUMN', N'Location'
+Go
+DECLARE @v sql_variant 
+SET @v = N'描述'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObject', N'COLUMN', N'Describe'
+Go
+DECLARE @v sql_variant 
+SET @v = N'数据状态'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookObject', N'COLUMN', N'[State]'
+Go
+
+Commit
+/* 表名: Departments*/
+BEGIN TRANSACTION
+Go
+CREATE TABLE dbo.Departments(
+    Id uniqueidentifier  NOT NULL
+    ,Name nvarchar(10)  NOT NULL
+    ,Minister nvarchar(10)  NOT NULL
+    ,Describe nvarchar(200)  NULL
+    ,[State] int  NOT NULL
+    )  ON [PRIMARY]
+Go
+ALTER TABLE dbo.Departments ADD CONSTRAINT
+PK_Departments PRIMARY KEY CLUSTERED (
+Id
+) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+Go
+DECLARE @v sql_variant 
+SET @v = N'Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Departments', N'COLUMN', N'Id'
+Go
+DECLARE @v sql_variant 
+SET @v = N'部门名称'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Departments', N'COLUMN', N'Name'
+Go
+DECLARE @v sql_variant 
+SET @v = N'部门主管'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Departments', N'COLUMN', N'Minister'
+Go
+DECLARE @v sql_variant 
+SET @v = N'类别描述'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Departments', N'COLUMN', N'Describe'
+Go
+DECLARE @v sql_variant 
+SET @v = N'数据状态'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Departments', N'COLUMN', N'[State]'
+Go
+
+Commit
+/* 表名: BookRecords*/
+BEGIN TRANSACTION
+Go
+CREATE TABLE dbo.BookRecords(
+    Id uniqueidentifier  NOT NULL
+    ,BookObjectId uniqueidentifier  NOT NULL
+    ,StartDate datetime  NOT NULL
+    ,EndDate datetime  NOT NULL
+    ,StartTime datetime  NOT NULL
+    ,EndTime datetime  NOT NULL
+    ,WhetherContinuous bit  NOT NULL
+    ,Describe nvarchar(200)  NULL
+    ,DepartmentId uniqueidentifier  NOT NULL
+    ,Tel nvarchar(20)  NOT NULL
+    ,[State] int  NOT NULL
+    ,Creator nvarchar(20)  NOT NULL
+    ,DateCreated datetime  NOT NULL
+    ,Modifier nvarchar(20)  NULL
+    ,DateModified datetime  NULL
+    )  ON [PRIMARY]
+Go
+ALTER TABLE dbo.BookRecords ADD CONSTRAINT
+PK_BookRecords PRIMARY KEY CLUSTERED (
+Id
+) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+Go
+DECLARE @v sql_variant 
+SET @v = N'Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'Id'
+Go
+DECLARE @v sql_variant 
+SET @v = N'预约、预订对象表Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'BookObjectId'
+Go
+DECLARE @v sql_variant 
+SET @v = N'开始日期'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'StartDate'
+Go
+DECLARE @v sql_variant 
+SET @v = N'结束日期'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'EndDate'
+Go
+DECLARE @v sql_variant 
+SET @v = N'开始时间'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'StartTime'
+Go
+DECLARE @v sql_variant 
+SET @v = N'结束时间'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'EndTime'
+Go
+DECLARE @v sql_variant 
+SET @v = N'是否连续'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'WhetherContinuous'
+Go
+DECLARE @v sql_variant 
+SET @v = N'描述'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'Describe'
+Go
+DECLARE @v sql_variant 
+SET @v = N'部门Id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'DepartmentId'
+Go
+DECLARE @v sql_variant 
+SET @v = N'联系电话'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'Tel'
+Go
+DECLARE @v sql_variant 
+SET @v = N'数据状态'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'[State]'
+Go
+DECLARE @v sql_variant 
+SET @v = N'创建人'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'Creator'
+Go
+DECLARE @v sql_variant 
+SET @v = N'创建时间'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'DateCreated'
+Go
+DECLARE @v sql_variant 
+SET @v = N'修改人'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'Modifier'
+Go
+DECLARE @v sql_variant 
+SET @v = N'修改时间'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'BookRecords', N'COLUMN', N'DateModified'
+Go
+
+Commit
+Begin Transaction
+ALTER TABLE dbo.BookObject ADD CONSTRAINT
+FK_BookObject_BookObjectType FOREIGN KEY(
+BookObjectTypeId
+) REFERENCES dbo.BookObjectType(
+[Id]
+) ON UPDATE  NO ACTION
+ ON DELETE  NO ACTION
+ALTER TABLE dbo.BookRecords ADD CONSTRAINT
+FK_BookRecords_BookObject FOREIGN KEY(
+BookObjectId
+) REFERENCES dbo.BookObject(
+[Id]
+) ON UPDATE  NO ACTION
+ ON DELETE  NO ACTION
+ALTER TABLE dbo.BookRecords ADD CONSTRAINT
+FK_BookRecords_Departments FOREIGN KEY(
+DepartmentId
+) REFERENCES dbo.Departments(
+[Id]
+) ON UPDATE  NO ACTION
+ ON DELETE  NO ACTION
+
+Commit

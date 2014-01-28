@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------------------------------
+
+ * FileName :         login.css
+ * Description :      Dandelion
+ * Version :          2011-10-11
+ * Author :           chenyao
+ 
+==STRUCTURE==========================
+
+ * Number of columns : 1 Columns
+ * Page Width : 100%
+ * Other Width : 100%
+
+-----------------------------------*/
+ body
+ {
+     
+     }
+ 
+ul,li{list-style:none;}
+
+input{vertical-align:middle;line-height:20px;}
+
+.all{width:100%}
+.left{float:left}
+.right{float:right}
+.clear{clear:both; height:0px; overflow:hidden; font-size:0px; line-height:0px;}
+
+.button-left
+{
+    margin-left:30px;
+    }
+.footer
+{
+    text-align:center;
+       margin-top:100px;
+    }
+    .login-bg
+{
+    margin-top: 100px;
+}
+  .login-con
+{
+    margin: 0px 0px 0px 198px;
+    width: 360px;
+    overflow: hidden;
+}
+    .login-ul{padding:50px 0px 0px 5px; overflow:hidden}
+	  .login-ul li{padding:0px 0px 10px 0px}	  
+      .lipad8{ font-size:14px; }
+
+.login-line{border-bottom:1px solid #c8c8c8; width:320px; padding-bottom:8px; margin-bottom:8px; overflow:hidden}
+
+.login_ts{color:#ff0000; font-size:14px; font-weight:bold; line-height:14px; padding-left:15px;}
+  
+.login-bb{padding:0px 0px 0px 15px; text-align:center}
+
+.login_img { vertical-align: middle; }

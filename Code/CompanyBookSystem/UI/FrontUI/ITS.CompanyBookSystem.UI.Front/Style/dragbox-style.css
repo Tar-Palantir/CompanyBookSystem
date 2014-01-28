@@ -1,0 +1,51 @@
+.column{
+	width:33%;
+	margin-right:.5%;
+	min-height:550px;
+	float:left;
+}
+.column .dragbox{
+	background:#fff;
+	position:relative;
+	border:1px solid #ddd;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.column .dragbox h2{
+	margin:0;
+	font-size:12px;
+	padding:5px;
+	background:#f0f0f0;
+	color:#000;
+	border-bottom:1px solid #eee;
+	font-family:Verdana;
+	cursor:move;
+}
+.dragbox-content{
+	background:#fff;
+	min-height:100px; margin:5px;
+	font-family:'Lucida Grande', Verdana; font-size:0.8em; line-height:1.5em;
+}
+.column  .placeholder
+{
+    height:30px;
+	background: #D5CBBB;
+	border:1px dashed #D5CBBB;
+}
+.dragbox h2.collapse{
+	background:#f0f0f0 url('images/collapse.png') no-repeat top right;
+}
+.dragbox h2 .tips
+{
+    font-style:italic;
+    color:White;
+	font-size:11px; font-weight:normal;
+	margin-right:30px; float:right;
+}
+
+#finishedList{
+	background:url("images/finished.png") no-repeat center;
+}
+#processingList{
+	background:url("images/processing.png") no-repeat center;
+}

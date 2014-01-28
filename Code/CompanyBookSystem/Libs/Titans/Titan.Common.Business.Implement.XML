@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Titan.Common.Business.Implement</name>
+    </assembly>
+    <members>
+        <member name="T:Titan.Common.Business.Implement.BusinessLogicFactory">
+            <summary>
+            业务逻辑类工厂
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.BusinessLogicFactory.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.BusinessLogicFactory.GetLogicInstance``2">
+            <summary>
+            获取业务逻辑实例
+            </summary>
+            <typeparam name="TLogic">业务逻辑接口</typeparam>
+            <typeparam name="TEntity">业务实体</typeparam>
+            <returns>务逻辑实例</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.BusinessLogicFactory.GetLogicInstance``1">
+            <summary>
+            获取业务逻辑实例
+            </summary>
+            <typeparam name="TLogic">业务逻辑接口</typeparam>
+            <returns>务逻辑实例</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.BusinessLogicFactory.GetRepositoryInstance``2">
+            <summary>
+            获取数据访问实例
+            </summary>
+            <typeparam name="TRepository">数据访问接口</typeparam>
+            <typeparam name="TEntity">业务实体</typeparam>
+            <returns>数据访问实例</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.BusinessLogicFactory.GetRepositoryInstance``1">
+            <summary>
+            获取数据访问实例
+            </summary>
+            <typeparam name="TRepository">数据访问接口</typeparam>
+            <returns>数据访问实例</returns>
+        </member>
+        <member name="T:Titan.Common.Business.Implement.EntityBaseLogic`1">
+            <summary>
+            实体业务逻辑基类
+            </summary>
+            <typeparam name="T">业务实体类</typeparam>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.#ctor(Titan.Common.DataAccess.Interface.IRepository{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository">注入数据访问接口</param>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.Create(`0,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            创建实体对象
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.Update(`0,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            更新实体对象
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.Update(System.Guid,System.Action{`0},Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            更新实体对象
+            </summary>
+            <param name="id">业务对象Id</param>
+            <param name="action">业务实体对象</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.Delete(System.Guid,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            删除实体对象
+            </summary>
+            <param name="id">实体对象Id</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.RefreshMemCache">
+            <summary>
+             刷新全表缓存
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.GetById(System.Guid)">
+            <summary>
+            通过ID获取实体对象
+            </summary>
+            <param name="id">实体对象Id</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.HeadIsExist(System.Guid)">
+            <summary>
+            根据Id判断业务对象是否存在
+            </summary>
+            <param name="id">业务对象标识</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.GetByValues(System.Collections.Generic.IList{System.Guid})">
+            <summary>
+            通过指定Id清单获取实体对象清单
+            </summary>
+            <param name="values">实体Id清单</param>
+            <returns>实体对象清单</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.GetAll">
+            <summary>
+            获取所有实体对象
+            </summary>
+            <returns>实体对象清单</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.QuickQuery(Titan.Common.DataAccess.Entities.QuickQueryParam)">
+            <summary>
+            根据查询参数执行快速查询，并生成分页信息
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <returns>业务对象查询结果</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Implement.EntityBaseLogic`1.AdvQuery``1(``0)">
+            <summary>
+            根据查询参数执行高级查询，并生成分页信息
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <returns>业务对象查询结果</returns>
+        </member>
+        <member name="P:Titan.Common.Business.Implement.EntityBaseLogic`1.CurrentUser">
+            <summary>
+            获取当前用户
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,148 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{D7426042-242C-4409-BB19-9EA3133E9E01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{DEA5AFA8-D8AB-44D0-BE93-CF8590F69B89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{FF9339ED-6DF8-4F63-9E7A-F5CEC69B2613}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{CEC3EFC9-B11A-4D70-BD8A-C51B54E4A14B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF4.1", "EF4.1", "{C2CEE620-87E7-40D7-9FCD-F96BA35EB4A6}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\EF4.1\EntityFramework.dll = Libs\EF4.1\EntityFramework.dll
+		Libs\EF4.1\EntityFramework.xml = Libs\EF4.1\EntityFramework.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Titans", "Titans", "{EC38AD25-3574-47FC-82CF-B03C356A1ED1}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\Titans\Titan.Common.Business.Implement.dll = Libs\Titans\Titan.Common.Business.Implement.dll
+		Libs\Titans\Titan.Common.Business.Implement.pdb = Libs\Titans\Titan.Common.Business.Implement.pdb
+		Libs\Titans\Titan.Common.Business.Implement.XML = Libs\Titans\Titan.Common.Business.Implement.XML
+		Libs\Titans\Titan.Common.Business.Interface.dll = Libs\Titans\Titan.Common.Business.Interface.dll
+		Libs\Titans\Titan.Common.Business.Interface.pdb = Libs\Titans\Titan.Common.Business.Interface.pdb
+		Libs\Titans\Titan.Common.Business.Interface.xml = Libs\Titans\Titan.Common.Business.Interface.xml
+		Libs\Titans\Titan.Common.Cache.dll = Libs\Titans\Titan.Common.Cache.dll
+		Libs\Titans\Titan.Common.Cache.pdb = Libs\Titans\Titan.Common.Cache.pdb
+		Libs\Titans\Titan.Common.Cache.XML = Libs\Titans\Titan.Common.Cache.XML
+		Libs\Titans\Titan.Common.Config.dll = Libs\Titans\Titan.Common.Config.dll
+		Libs\Titans\Titan.Common.Config.pdb = Libs\Titans\Titan.Common.Config.pdb
+		Libs\Titans\Titan.Common.DataAccess.Entities.dll = Libs\Titans\Titan.Common.DataAccess.Entities.dll
+		Libs\Titans\Titan.Common.DataAccess.Entities.pdb = Libs\Titans\Titan.Common.DataAccess.Entities.pdb
+		Libs\Titans\Titan.Common.DataAccess.Entities.XML = Libs\Titans\Titan.Common.DataAccess.Entities.XML
+		Libs\Titans\Titan.Common.DataAccess.Implement.dll = Libs\Titans\Titan.Common.DataAccess.Implement.dll
+		Libs\Titans\Titan.Common.DataAccess.Implement.pdb = Libs\Titans\Titan.Common.DataAccess.Implement.pdb
+		Libs\Titans\Titan.Common.DataAccess.Implement.XML = Libs\Titans\Titan.Common.DataAccess.Implement.XML
+		Libs\Titans\Titan.Common.DataAccess.Interface.dll = Libs\Titans\Titan.Common.DataAccess.Interface.dll
+		Libs\Titans\Titan.Common.DataAccess.Interface.pdb = Libs\Titans\Titan.Common.DataAccess.Interface.pdb
+		Libs\Titans\Titan.Common.DataAccess.Interface.XML = Libs\Titans\Titan.Common.DataAccess.Interface.XML
+		Libs\Titans\Titan.Common.DataStatus.dll = Libs\Titans\Titan.Common.DataStatus.dll
+		Libs\Titans\Titan.Common.DataStatus.pdb = Libs\Titans\Titan.Common.DataStatus.pdb
+		Libs\Titans\Titan.Common.DataStatus.XML = Libs\Titans\Titan.Common.DataStatus.XML
+		Libs\Titans\Titan.Common.Helper.dll = Libs\Titans\Titan.Common.Helper.dll
+		Libs\Titans\Titan.Common.Helper.pdb = Libs\Titans\Titan.Common.Helper.pdb
+		Libs\Titans\Titan.Common.Helper.XML = Libs\Titans\Titan.Common.Helper.XML
+		Libs\Titans\Titan.Common.Log.dll = Libs\Titans\Titan.Common.Log.dll
+		Libs\Titans\Titan.Common.Log.pdb = Libs\Titans\Titan.Common.Log.pdb
+		Libs\Titans\Titan.Common.Log.XML = Libs\Titans\Titan.Common.Log.XML
+		Libs\Titans\Titan.Common.UI.dll = Libs\Titans\Titan.Common.UI.dll
+		Libs\Titans\Titan.Common.UI.pdb = Libs\Titans\Titan.Common.UI.pdb
+		Libs\Titans\Titan.Common.UI.XML = Libs\Titans\Titan.Common.UI.XML
+		Libs\Titans\Titan.Log.DataAccess.Entities.dll = Libs\Titans\Titan.Log.DataAccess.Entities.dll
+		Libs\Titans\Titan.Log.DataAccess.Entities.pdb = Libs\Titans\Titan.Log.DataAccess.Entities.pdb
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CompanyBookSystem.DataAccess.Entity", "DataAccess\ITS.CompanyBookSystem.DataAccess.Entity\ITS.CompanyBookSystem.DataAccess.Entity.csproj", "{41E3B397-E8EB-4BC8-862D-14FFF29AC45F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CompanyBookSystem.DataAccess.Implement", "DataAccess\ITS.CompanyBookSystem.DataAccess.Implement\ITS.CompanyBookSystem.DataAccess.Implement.csproj", "{7AD59268-2C5F-4974-BCC6-F85960B087BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CompanyBookSystem.DataAccess.Interface", "DataAccess\ITS.CompanyBookSystem.DataAccess.Interface\ITS.CompanyBookSystem.DataAccess.Interface.csproj", "{48332401-B8AA-4B6B-BABA-222A182DBE9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CompanyBookSystem.Business.Implement", "Business\ITS.CompanyBookSystem.Business.Implement\ITS.CompanyBookSystem.Business.Implement.csproj", "{A7DEC54C-74B8-4512-B65F-87060E5A7C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CompanyBookSystem.Business.Interface", "Business\ITS.CompanyBookSystem.Business.Interface\ITS.CompanyBookSystem.Business.Interface.csproj", "{D3FB99ED-3641-4D58-AAEB-6CBC8DF6A1E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontUI", "FrontUI", "{158FAC07-1E91-4C3E-8961-7D3F8999C4DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehindUI", "BehindUI", "{86DDF097-10C9-4F77-AD2B-348FECA3B238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CompanyBookSystem.UI.BehindUI", "UI\BehindUI\ITS.CompanyBookSystem.UI.BehindUI\ITS.CompanyBookSystem.UI.BehindUI.csproj", "{19E0D19A-2A83-4FEC-B190-0CABBFCEA578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.Practices", "Microsoft.Practices", "{1D6C8C2A-9708-4295-A439-D42DCED3AA06}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\Microsoft.Practices\Microsoft.Practices.ServiceLocation.dll = Libs\Microsoft.Practices\Microsoft.Practices.ServiceLocation.dll
+		Libs\Microsoft.Practices\Microsoft.Practices.Unity.Configuration.dll = Libs\Microsoft.Practices\Microsoft.Practices.Unity.Configuration.dll
+		Libs\Microsoft.Practices\Microsoft.Practices.Unity.Configuration.pdb = Libs\Microsoft.Practices\Microsoft.Practices.Unity.Configuration.pdb
+		Libs\Microsoft.Practices\Microsoft.Practices.Unity.dll = Libs\Microsoft.Practices\Microsoft.Practices.Unity.dll
+		Libs\Microsoft.Practices\Microsoft.Practices.Unity.pdb = Libs\Microsoft.Practices\Microsoft.Practices.Unity.pdb
+		Libs\Microsoft.Practices\Microsoft.Practices.Unity.xml = Libs\Microsoft.Practices\Microsoft.Practices.Unity.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CompanyBookSystem.UI.Front", "UI\FrontUI\ITS.CompanyBookSystem.UI.Front\ITS.CompanyBookSystem.UI.Front.csproj", "{10774078-5D23-4A09-A98A-033DEA43CD54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicQuery", "DynamicQuery", "{A7CB5948-3E22-4FEB-B616-4D9D873F31A9}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\DynamicQuery\DynamicQuery.dll = Libs\DynamicQuery\DynamicQuery.dll
+		Libs\DynamicQuery\DynamicQuery.pdb = Libs\DynamicQuery\DynamicQuery.pdb
+		Libs\DynamicQuery\DynamicQuery.xml = Libs\DynamicQuery\DynamicQuery.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41E3B397-E8EB-4BC8-862D-14FFF29AC45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E3B397-E8EB-4BC8-862D-14FFF29AC45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E3B397-E8EB-4BC8-862D-14FFF29AC45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E3B397-E8EB-4BC8-862D-14FFF29AC45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD59268-2C5F-4974-BCC6-F85960B087BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD59268-2C5F-4974-BCC6-F85960B087BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD59268-2C5F-4974-BCC6-F85960B087BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD59268-2C5F-4974-BCC6-F85960B087BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48332401-B8AA-4B6B-BABA-222A182DBE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48332401-B8AA-4B6B-BABA-222A182DBE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48332401-B8AA-4B6B-BABA-222A182DBE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48332401-B8AA-4B6B-BABA-222A182DBE9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DEC54C-74B8-4512-B65F-87060E5A7C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DEC54C-74B8-4512-B65F-87060E5A7C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DEC54C-74B8-4512-B65F-87060E5A7C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DEC54C-74B8-4512-B65F-87060E5A7C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3FB99ED-3641-4D58-AAEB-6CBC8DF6A1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FB99ED-3641-4D58-AAEB-6CBC8DF6A1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FB99ED-3641-4D58-AAEB-6CBC8DF6A1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FB99ED-3641-4D58-AAEB-6CBC8DF6A1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E0D19A-2A83-4FEC-B190-0CABBFCEA578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E0D19A-2A83-4FEC-B190-0CABBFCEA578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E0D19A-2A83-4FEC-B190-0CABBFCEA578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E0D19A-2A83-4FEC-B190-0CABBFCEA578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10774078-5D23-4A09-A98A-033DEA43CD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10774078-5D23-4A09-A98A-033DEA43CD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10774078-5D23-4A09-A98A-033DEA43CD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10774078-5D23-4A09-A98A-033DEA43CD54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{41E3B397-E8EB-4BC8-862D-14FFF29AC45F} = {D7426042-242C-4409-BB19-9EA3133E9E01}
+		{7AD59268-2C5F-4974-BCC6-F85960B087BB} = {D7426042-242C-4409-BB19-9EA3133E9E01}
+		{48332401-B8AA-4B6B-BABA-222A182DBE9C} = {D7426042-242C-4409-BB19-9EA3133E9E01}
+		{A7DEC54C-74B8-4512-B65F-87060E5A7C8B} = {DEA5AFA8-D8AB-44D0-BE93-CF8590F69B89}
+		{D3FB99ED-3641-4D58-AAEB-6CBC8DF6A1E6} = {DEA5AFA8-D8AB-44D0-BE93-CF8590F69B89}
+		{158FAC07-1E91-4C3E-8961-7D3F8999C4DC} = {FF9339ED-6DF8-4F63-9E7A-F5CEC69B2613}
+		{86DDF097-10C9-4F77-AD2B-348FECA3B238} = {FF9339ED-6DF8-4F63-9E7A-F5CEC69B2613}
+		{C2CEE620-87E7-40D7-9FCD-F96BA35EB4A6} = {CEC3EFC9-B11A-4D70-BD8A-C51B54E4A14B}
+		{EC38AD25-3574-47FC-82CF-B03C356A1ED1} = {CEC3EFC9-B11A-4D70-BD8A-C51B54E4A14B}
+		{1D6C8C2A-9708-4295-A439-D42DCED3AA06} = {CEC3EFC9-B11A-4D70-BD8A-C51B54E4A14B}
+		{A7CB5948-3E22-4FEB-B616-4D9D873F31A9} = {CEC3EFC9-B11A-4D70-BD8A-C51B54E4A14B}
+		{10774078-5D23-4A09-A98A-033DEA43CD54} = {158FAC07-1E91-4C3E-8961-7D3F8999C4DC}
+		{19E0D19A-2A83-4FEC-B190-0CABBFCEA578} = {86DDF097-10C9-4F77-AD2B-348FECA3B238}
+	EndGlobalSection
+EndGlobal

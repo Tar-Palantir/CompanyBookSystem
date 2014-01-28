@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0}
+body{ font:12px/24px Tahoma, Geneva, sans-serif,"宋体"; background:url(images/bg.png) repeat-x left top;}
+a{ text-decoration:none; color:#333}
+
+
+#box{ width:698px; height:412px; position:absolute; margin-left:-349px; margin-top:-206px; top:50%; left:50%; background:url(images/box_bg.png)}
+.box{ width:698px;}
+.box table.main{ width:498px; margin:0 auto; margin-top:100px;}
+.box table.main td{ padding:5px 0}
+.box table.main td.header{ width:200px; text-align:right; font-size:14px; font-weight:bold; color:#585d7d}
+.box .txt, .vcode{ height:26px; width:200px; margin-left:5px; background:url(images/txt_bg.gif) repeat-x left top; border:1px solid #d5d5d5 }
+.box .vcode{ width:60px;  }
+.box .btn{ text-align:center}
+.box .info{ height:64px; text-align:center}
+.box .info span{ font-size:10px; color:#333}
+input
+{
+    padding: 2px 1px;
+    vertical-align: middle;
+    height:18px;
+    width: 180px;
+    border: 1px solid #6699CC;
+}

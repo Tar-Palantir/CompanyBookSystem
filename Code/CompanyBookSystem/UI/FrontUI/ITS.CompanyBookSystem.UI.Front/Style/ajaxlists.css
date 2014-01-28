@@ -1,0 +1,62 @@
+﻿.loading
+{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.loading div.background
+{
+    background-color: #A8CFE9;
+    height: 20px;
+    left: 47%;
+    opacity: 0.8;
+    position: absolute;
+    top: 44%;
+    width: 90px;
+}
+.loading div.text
+{
+    font-weight: bold;
+    height: auto;
+    left: 25px;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: auto;
+}
+.loading div.image
+{
+    background: url("images/loading.gif") repeat scroll 0 0 transparent;
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    top: 2px;
+    width: 16px;
+}
+.detail
+{
+    table-layout: fixed;
+    line-height: 20px;
+    width: 100%;
+}
+.detail tr
+{
+    width: 100%;
+}
+.detail tr td.name
+{
+    width: 65px;
+    font-weight: bold;
+}
+
+.querybox
+{
+    width: 100%;
+    height: 25px;
+    padding-top: 5px;
+}

@@ -1,0 +1,564 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Titan.Common.Helper</name>
+    </assembly>
+    <members>
+        <member name="T:Titan.Common.Helper.VerifyCodeHelper">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="F:Titan.Common.Helper.VerifyCodeHelper.verifyCodeSessionKey">
+            <summary>
+            验证码在Session中存储的Key
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.VerifyCodeHelper.GetVerifyCodeImage">
+            <summary>
+            获取验证码的图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.VerifyCodeHelper.ValidateVerifyCodeValue(System.String)">
+            <summary>
+            获取验证码的值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.VerifyCodeHelper.CreateGraphic(System.String)">
+            <summary>
+            创建图片
+            </summary>
+            <param name="verifyCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.VerifyCodeHelper.Compute(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据指定的运算符对两个数字进行运算
+            </summary>
+            <param name="firstNumber"></param>
+            <param name="secondNumber"></param>
+            <param name="operate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.Helper.EntityPropertyInfo">
+            <summary>
+            业务实体属性信息
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.EntityPropertyInfo.Name">
+            <summary>
+            属性的名称
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.EntityPropertyInfo.DisplayName">
+            <summary>
+            属性的显示名称
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.EntityPropertyInfo.Description">
+            <summary>
+            属性的描述
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.EntityPropertyInfo.TypeName">
+            <summary>
+            属性的类型名称
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Helper.EnumPropertyInfo">
+            <summary>
+            枚举属性信息
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.EnumPropertyInfo.Description">
+            <summary>
+            枚举的描述
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Helper.DateTimeHelper">
+            <summary>
+            时间辅助类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.DateTimeHelper.DateFormat(System.DateTime)">
+            <summary>
+            返回日期格式
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.DateTimeHelper.TimeFormat(System.DateTime)">
+            <summary>
+            返回时间格式
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.DateTimeHelper.DateTimeFormat(System.DateTime)">
+            <summary>
+            返回日期时间格式
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.DateTimeHelper.DateTimeSubtract(System.DateTime,System.DateTime)">
+            <summary>
+            根据两个时间差返回分钟小时与天数
+            </summary>
+            <param name="dateTimeOne">时间1</param>
+            <param name="dateTimeTwo">时间2</param>
+            <returns>两个时间差分钟小时与天数</returns>
+        </member>
+        <member name="T:Titan.Common.Helper.CHS2PinYinHepler">
+            <summary>
+            汉子转换拼音
+            </summary>
+        </member>
+        <member name="F:Titan.Common.Helper.CHS2PinYinHepler.pv">
+            
+            <summary> 
+            包含字符 ASC 码的整形数组。 
+            </summary> 
+        </member>
+        <member name="F:Titan.Common.Helper.CHS2PinYinHepler.ps">
+            
+            <summary> 
+            包含汉字拼音的字符串数组。 
+            </summary> 
+        </member>
+        <member name="F:Titan.Common.Helper.CHS2PinYinHepler.bd">
+            
+            <summary> 
+            包含要排除处理的字符的字符串数组。 
+            </summary> 
+        </member>
+        <member name="M:Titan.Common.Helper.CHS2PinYinHepler.Convert(System.String,System.String,System.Boolean)">
+            
+            <summary> 
+            将指定中文字符串转换为拼音形式。 
+            </summary> 
+            <param name="chs">要转换的中文字符串。</param> 
+            <param name="separator">连接拼音之间的分隔符。</param> 
+            <param name="initialCap">指定是否将首字母大写。</param> 
+            <returns>包含中文字符串的拼音的字符串。</returns> 
+        </member>
+        <member name="M:Titan.Common.Helper.CHS2PinYinHepler.Convert(System.String,System.String)">
+            
+            <summary> 
+            将指定中文字符串转换为拼音形式。 
+            </summary> 
+            <param name="chs">要转换的中文字符串。</param> 
+            <param name="separator">连接拼音之间的分隔符。</param> 
+            <returns>包含中文字符串的拼音的字符串。</returns> 
+        </member>
+        <member name="M:Titan.Common.Helper.CHS2PinYinHepler.Convert(System.String,System.Boolean)">
+            
+            <summary> 
+            将指定中文字符串转换为拼音形式。 
+            </summary> 
+            <param name="chs">要转换的中文字符串。</param> 
+            <param name="initialCap">指定是否将首字母大写。</param> 
+            <returns>包含中文字符串的拼音的字符串。</returns> 
+        </member>
+        <member name="M:Titan.Common.Helper.CHS2PinYinHepler.Convert(System.String)">
+            
+            <summary> 
+            将指定中文字符串转换为拼音形式。 
+            </summary> 
+            <param name="chs">要转换的中文字符串。</param> 
+            <returns>包含中文字符串的拼音的字符串。</returns> 
+        </member>
+        <member name="P:Titan.Common.Helper.CHS2PinYinHepler.Phrase">
+            
+            <summary> 
+            设置或获取包含列外词组读音的键/值对的组合。 
+            </summary> 
+        </member>
+        <member name="T:Titan.Common.Helper.SerializationHelper">
+            <summary>
+            序列化辅助操作类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.SerializationHelper.Serializer(System.Object,Titan.Common.Helper.SerializationHelper.SerializeMode)">
+            <summary>
+            将传入的对象根据指定的序列化方式序列化为字符串
+            </summary>
+            <param name="value"></param>
+            <param name="serializeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.SerializationHelper.Serializer(System.Object,System.Type,Titan.Common.Helper.SerializationHelper.SerializeMode)">
+            <summary>
+            将传入的对象根据指定的序列化方式序列化为字符串
+            </summary>
+            <param name="value"></param>
+            <param name="valueType"></param>
+            <param name="serializeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.SerializationHelper.DeSerializer(System.String,System.Type,Titan.Common.Helper.SerializationHelper.SerializeMode)">
+            <summary>
+            将传入的字符串反序列化为指定类型的对象
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <param name="serializeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.SerializationHelper.CloneBySerializer(System.Object)">
+            <summary>
+            通过序列化克隆对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.SerializationHelper.GetSerrializer(System.Type,Titan.Common.Helper.SerializationHelper.SerializeMode)">
+            <summary>
+            根据序列化方式获取序列化器
+            </summary>
+            <param name="type"></param>
+            <param name="serializeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.SerializationHelper.ConvertJsonToObject``1(System.String)">
+            <summary>
+            将Json数据转化为对象（可以进行复合对象序列化）
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="strJson">要转化的Json数据</param>
+            <returns>转化后的对象</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.SerializationHelper.ConvertObjectToJson(System.Object)">
+            <summary>
+            将对象转化为Json数据（可以进行复合对象序列化）
+            </summary>
+            <param name="obj">要转化的对象</param>
+            <returns>返回Json数据</returns>
+        </member>
+        <member name="T:Titan.Common.Helper.SerializationHelper.SerializeMode">
+            <summary>
+            序列化方式
+            </summary>
+        </member>
+        <member name="F:Titan.Common.Helper.SerializationHelper.SerializeMode.DataContract">
+            <summary>
+            采用DataContractSerializer类进行序列化
+            </summary>
+        </member>
+        <member name="F:Titan.Common.Helper.SerializationHelper.SerializeMode.Json">
+            <summary>
+            采用DataContractJsonSerializer类进行序列化
+            </summary>
+        </member>
+        <member name="F:Titan.Common.Helper.SerializationHelper.SerializeMode.JavaScript">
+            <summary>
+            采用JavaScriptSerializer类进行序列化
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Helper.ReflectionHelper">
+            <summary>
+            反射操作的辅助类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.ReflectionHelper.GetEnumPropertyInfo(System.Type)">
+            <summary>
+            获取枚举属性信息
+            </summary>
+            <param name="type">枚举</param>
+            <returns>枚举属性信息</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.ReflectionHelper.GetDataMemberProperties(System.Type)">
+            <summary>
+             获取实体的数据成员(DataMember)属性
+            </summary>
+            <returns>数据成员属性信息</returns>
+        </member>
+        <member name="T:Titan.Common.Helper.PasswordHasher">
+            <summary>
+            密码加密
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.PasswordHasher.Hash(System.String)">
+            <summary>
+            安全散列算法加密
+            </summary>
+            <param name="strText">密码</param>
+            <returns>加密结果</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.PasswordHasher.EncodeToBase64(System.String)">
+            <summary>
+            获取按Base64编码后的字符串
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.PasswordHasher.DecodeFromBase64(System.String)">
+            <summary>
+            获取解码Base64后的格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.PasswordHasher.GetMd5Hash(System.String)">
+            <summary>
+            获取Md5哈希值
+            </summary>
+            <param name="value">返回值为32位的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.Helper.EnumHelper">
+            <summary>
+            枚举帮助类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.EnumHelper.Description(System.Enum)">
+            <summary>
+            获取描述信息
+            </summary>
+            <param name="en">当前枚举</param>
+            <returns>枚举描述信息</returns>
+        </member>
+        <member name="T:Titan.Common.Helper.DynamicClassHelper">
+            <summary>
+            动态类帮助类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.DynamicClassHelper.CreateAssembly(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            创建新程序集动态类
+            </summary>
+            <returns>程序集</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.DynamicClassHelper.CreateProperty(System.Collections.Generic.KeyValuePair{System.String,System.String})">
+            <summary>
+            创建类属性
+            </summary>
+            <param name="property">属性(键值对如：int,Name)</param>
+            <returns>属性字符串</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.DynamicClassHelper.SetProperty(System.Object,System.String,System.Object)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="objClass">实例对象</param>
+            <param name="propertyName">属性名</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="T:Titan.Common.Helper.MappingHelper">
+            <summary>
+            对象映射辅助类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.MappingHelper.Convert``1(System.Object)">
+            <summary>
+            通过反射将传入的对象转换为指定类型的对象
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.MappingHelper.Convert(System.Object,System.Type)">
+            <summary>
+            通过反射将传入的对象转换为指定类型的对象
+            </summary>
+            <param name="input"></param>
+            <param name="targetType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.Helper.Openxml.ImportInfo">
+            <summary>
+            导入信息
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ImportInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.Openxml.ImportInfo.Sucessed">
+            <summary>
+            获取一个值表示是否导入成功
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.Openxml.ImportInfo.Errors">
+            <summary>
+            导入错误消息
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Helper.Openxml.ImportInfo.ErrorCount">
+            <summary>
+            错误个数
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Helper.Openxml.ExcelHelper">
+            <summary>
+            Excel文档处理类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.ExcelExport(System.Collections.IList,System.String)">
+            <summary>
+            通过传入的对象列表导出excel文档
+            </summary>
+            <param name="data">列表对象</param>
+            <param name="fileName">导出文件名</param>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.ExcelImport``1(Titan.Common.Helper.Openxml.ImportInfo@,System.String)">
+            <summary>
+            将导入Excel文档转换为列表对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.Send(System.String)">
+            <summary>
+            将当前文档发送到浏览器
+            </summary>
+            <param name="fileName">导出的文件名</param>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.Save(System.String)">
+            <summary>
+            将当前文档保存到指定位置
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.PreaperColumnInfo``1(DocumentFormat.OpenXml.Spreadsheet.Row,Titan.Common.Helper.Openxml.ImportInfo,System.Collections.Generic.IList{DocumentFormat.OpenXml.Spreadsheet.SharedStringItem})">
+            <summary>
+            准备行信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="headerRow"></param>
+            <param name="importInfo"></param>
+            <param name="sharedStringItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.ReadDataRows``1(System.Collections.Generic.IEnumerable{DocumentFormat.OpenXml.Spreadsheet.Row},System.Collections.Generic.Dictionary{System.Int32,System.Reflection.PropertyInfo},Titan.Common.Helper.Openxml.ImportInfo,System.Collections.Generic.IList{DocumentFormat.OpenXml.Spreadsheet.SharedStringItem})">
+            <summary>
+            读取数据行
+            </summary>
+            <param name="dataRows"></param>
+            <param name="propertyMaps"></param>
+            <param name="importInfo"></param>
+            <param name="sharedStringItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.ReadCellValue(DocumentFormat.OpenXml.Spreadsheet.Cell,System.Collections.Generic.IList{DocumentFormat.OpenXml.Spreadsheet.SharedStringItem})">
+            <summary>
+            读取SharedString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.CreateRowHeader(DocumentFormat.OpenXml.Spreadsheet.SheetData,System.Reflection.PropertyInfo[],DocumentFormat.OpenXml.Spreadsheet.Stylesheet)">
+            <summary>
+            添加列标题
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.CreateFont(DocumentFormat.OpenXml.Spreadsheet.Stylesheet,System.String,System.Nullable{System.Double},System.Boolean,System.Drawing.Color)">
+            <summary>
+            创建字体
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.CreateFill(DocumentFormat.OpenXml.Spreadsheet.Stylesheet,System.Drawing.Color)">
+            <summary>
+            创建填充对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.CreateCellFormat(DocumentFormat.OpenXml.Spreadsheet.Stylesheet,DocumentFormat.OpenXml.UInt32Value,DocumentFormat.OpenXml.UInt32Value,DocumentFormat.OpenXml.UInt32Value)">
+            <summary>
+            创建单元格格式
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.GetColumnName(System.Int32)">
+            <summary>
+            根据列序号获取对应的Excel列名
+            </summary>
+            <returns>1 = A, 2 = B... 27 = AA, etc.</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.GetColumnIndexByCellReference(System.String)">
+            <summary>
+            根据CellReference获取列号
+            </summary>
+            <param name="cellReference"></param>
+            <returns>A1=1,B1=2...AA1=27,etc.</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.CreateContentRow(System.Object,System.Int32)">
+            <summary>
+            创建行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.CreateTextCell(System.Int32,System.Int32,System.Object,System.Nullable{System.UInt32})">
+            <summary>
+            创建文本单元格
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelHelper.CreateValueCell(System.Int32,System.Int32,System.Object,System.Nullable{System.UInt32})">
+            <summary>
+            创建单元格
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Helper.StringHelper">
+            <summary>
+            字符串处理辅助类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.StringHelper.LeftSubString(System.String,System.Int32)">
+            <summary>
+             左取字符串
+            </summary>
+            <param name="inStr">输入字符串</param>
+            <param name="length">截取长度</param>
+            <returns>输出字符串</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.StringHelper.RightSubString(System.String,System.Int32)">
+            <summary>
+             右取字符串
+            </summary>
+            <param name="inStr">输入字符串</param>
+            <param name="length">截取长度</param>
+            <returns>输出字符串</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.StringHelper.GetCNString(System.String)">
+            <summary>
+             汉字转拼音首字母缩写
+            </summary>
+            <param name="str">汉字字符串</param>
+            <returns>拼音首字母</returns>
+        </member>
+        <member name="M:Titan.Common.Helper.StringHelper.ExtractCN(System.String)">
+            <summary>
+            转换汉子为拼音首字母
+            </summary>
+            <param name="cn">需要转的汉子</param>
+            <returns>拼音</returns>
+        </member>
+        <member name="T:Titan.Common.Helper.Openxml.ExcelPackageCreator">
+            <summary>
+            用来创建Excel文件包的类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelPackageCreator.GenerateWorkbookPartContent(DocumentFormat.OpenXml.Packaging.WorkbookPart)">
+            <summary>
+            创建工作表的内容
+            </summary>
+            <param name="workbookPart1"></param>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelPackageCreator.GenerateWorksheetPartContent(DocumentFormat.OpenXml.Packaging.WorksheetPart)">
+            <summary>
+            创建工作表的的内容
+            </summary>
+            <param name="worksheetPart"></param>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelPackageCreator.GenerateWorkbookStylesPartContent(DocumentFormat.OpenXml.Packaging.WorkbookStylesPart)">
+            <summary>
+            创建excel的样式内容
+            </summary>
+            <param name="workbookStylesPart"></param>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelPackageCreator.GenerateThemePartContent(DocumentFormat.OpenXml.Packaging.ThemePart)">
+            <summary>
+            创建主题的内容
+            </summary>
+            <param name="themePart"></param>
+        </member>
+        <member name="M:Titan.Common.Helper.Openxml.ExcelPackageCreator.SetPackageProperties(DocumentFormat.OpenXml.Packaging.OpenXmlPackage)">
+            <summary>
+            设置包的属性
+            </summary>
+            <param name="document"></param>
+        </member>
+    </members>
+</doc>

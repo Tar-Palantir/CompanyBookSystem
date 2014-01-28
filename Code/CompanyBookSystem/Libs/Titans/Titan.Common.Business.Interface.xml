@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Titan.Common.Business.Interface</name>
+    </assembly>
+    <members>
+        <member name="T:Titan.Common.Business.Interface.IEntityBaseLogic`1">
+            <summary>
+            基础操作的业务逻辑接口
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.Create(`0,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            创建实体对象
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.Update(`0,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            修改实体对象
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.Update(System.Guid,System.Action{`0},Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            更新当前实体对象
+            </summary>
+            <param name="id">业务实体Id</param>
+            <param name="action">业务实体对象</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.Delete(System.Guid,Titan.Common.DataStatus.OperateStatus@)">
+            <summary>
+            删除实体对象
+            </summary>
+            <param name="id">实体对象ID</param>
+            <param name="status">操作状态</param>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.RefreshMemCache">
+            <summary>
+             刷新全表缓存
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.GetById(System.Guid)">
+            <summary>
+            获取实体对象
+            </summary>
+            <param name="id">实体对象ID</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.HeadIsExist(System.Guid)">
+            <summary>
+            根据Id判断业务对象是否存在
+            </summary>
+            <param name="id">业务对象标识</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.GetByValues(System.Collections.Generic.IList{System.Guid})">
+            <summary>
+            通过指定Id清单获取实体对象清单
+            </summary>
+            <param name="values">实体Id清单</param>
+            <returns>实体对象清单</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.GetAll">
+            <summary>
+            获取所有实体对象
+            </summary>
+            <returns>实体对象清单</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.QuickQuery(Titan.Common.DataAccess.Entities.QuickQueryParam)">
+            <summary>
+            根据查询参数执行快速查询，并生成分页信息
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <returns>业务对象查询结果</returns>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityBaseLogic`1.AdvQuery``1(``0)">
+            <summary>
+            根据查询参数执行高级查询，并生成分页信息
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <returns>业务对象查询结果</returns>
+        </member>
+        <member name="T:Titan.Common.Business.Interface.IEntityQueryLogic`2">
+            <summary>
+            查询操作的逻辑层接口
+            </summary>
+            <typeparam name="TResult">查询结果</typeparam>
+            <typeparam name="TParam">查询参数</typeparam>
+        </member>
+        <member name="M:Titan.Common.Business.Interface.IEntityQueryLogic`2.Query(`1)">
+            <summary>
+            根据指定的查询参数执行查询，并生成分页信息
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <returns>查询结果</returns>
+        </member>
+    </members>
+</doc>

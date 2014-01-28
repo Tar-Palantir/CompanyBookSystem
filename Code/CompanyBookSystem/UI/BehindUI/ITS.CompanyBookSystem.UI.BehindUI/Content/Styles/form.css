@@ -1,0 +1,59 @@
+input, textarea
+{
+    padding: 2px 1px;
+    vertical-align: middle;
+    width: 180px;
+    border: 1px solid #6699CC;
+}
+.my_text
+{
+    width: 99%;
+    height: 80px;
+}
+textarea
+{
+    width: 67%;
+    height: 100px;
+}
+input[type='radio']
+{
+    border: none;
+    width: auto;
+}
+input[type='checkbox']
+{
+    border: none;
+    width: auto;
+}
+select
+{
+    width: 184px;
+}
+.text_lanseborder
+{
+    border: 1px solid #778ead;
+}
+select
+{
+    padding: 1px 1px 0 1px;
+    vertical-align: middle;
+    width: 184px;
+    border: 1px solid #6699CC;
+}
+
+.readonly
+{
+    background-color:#ACA899;    
+}
+.datagrid-pager input
+{
+    width:40px;
+    border: 1px solid #6699CC;
+}
+ .datagrid-pager select
+{
+    width:40px;
+
+}   
+    
+        

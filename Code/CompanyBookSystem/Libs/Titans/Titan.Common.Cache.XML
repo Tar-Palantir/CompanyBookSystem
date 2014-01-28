@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Titan.Common.Cache</name>
+    </assembly>
+    <members>
+        <member name="T:Titan.Common.Cache.MemCache">
+            <summary>
+            分布式缓存
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.#cctor">
+            <summary>
+            获取分布式缓存客户端
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Set(System.String,System.Object)">
+            <summary>
+            将对象放入缓存
+            </summary>
+            <param name="key">对象键</param>
+            <param name="value">对象值</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Set(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            将对象放入缓存
+            </summary>
+            <param name="key">对象键</param>
+            <param name="value">对象值</param>
+            <param name="expiry">有效期</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Set(System.String,System.Object,System.DateTime)">
+            <summary>
+            将对象放入缓存
+            </summary>
+            <param name="key">对象键</param>
+            <param name="value">对象值</param>
+            <param name="expiry">有效截止日期</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Get(System.String)">
+            <summary>
+            从缓存中获取对象
+            </summary>
+            <param name="key">对象键值</param>
+            <returns>对象值</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Gets(System.String[])">
+            <summary>
+            从缓存中获取多个对象
+            </summary>
+            <param name="keys">对象键值数组</param>
+            <returns>对象数组</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Delete(System.String)">
+            <summary>
+            从缓存中删除对象
+            </summary>
+            <param name="key">对象键值</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.GetAllKeys">
+            <summary>
+            获取所有的缓存对象keys
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Increment(System.String)">
+            <summary>
+            给指定的key增加value值为1
+            </summary>
+            <param name="key">对象键值</param>
+            <returns>递增后的值,如果key不存在则为空</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Increment(System.String,System.UInt64)">
+            <summary>
+            给指定的key增加value值
+            </summary>
+            <param name="key">对象键值</param>
+            <param name="value">递增的值</param>
+            <returns>递增后的值,如果key不存在则为空</returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Set(System.String,System.String,System.Object)">
+            <summary>
+             将对象按命名空间放入缓存
+            </summary>
+             <remarks>
+             增加命名空间后可以根据命名空间统一对缓存进行删除,默认过期时间为12小时
+             </remarks>
+            <param name="cacheNamespace">缓存命名空间</param>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Set(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+             将对象按命名空间放入缓存
+            </summary>
+             <remarks>
+             增加命名空间后可以根据命名空间统一对缓存进行删除
+             </remarks>
+            <param name="cacheNamespace">缓存命名空间</param>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="expiry">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Get(System.String,System.String)">
+            <summary>
+            从特定命名空间的缓存中获取对象
+            </summary>
+            <param name="cacheNamespace">缓存命名空间</param>
+            <param name="key">缓存键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.Delete(System.String,System.String)">
+            <summary>
+            从特定命名空间的缓存中删除对象
+            </summary>
+            <param name="cacheNamespace">缓存命名空间</param>
+            <param name="key">缓存键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.DeleteByNamespace(System.String)">
+            <summary>
+            删除特定命名空间的所有对象
+            </summary>
+            <param name="cacheNamespace">缓存命名空间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Titan.Common.Cache.MemCache.GetCacheNamespaceKey(System.String)">
+            <summary>
+            获取缓存命名空间key
+            </summary>
+            <param name="cacheNamespace">缓存命名空间</param>
+            <returns></returns>
+        </member>
+        <member name="T:Titan.Common.Cache.NeedMemCacheAttribute">
+            <summary>
+            缓存时配置的特性
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Cache.NeedMemCacheAttribute.#ctor(Titan.Common.Cache.CacheMode,System.TimeSpan)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="cacheMode">缓存处理模式</param>
+            <param name="expiry">有效期</param>
+        </member>
+        <member name="M:Titan.Common.Cache.NeedMemCacheAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Cache.NeedMemCacheAttribute.#ctor(Titan.Common.Cache.CacheMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="cacheMode">缓存处理模式</param>
+        </member>
+        <member name="P:Titan.Common.Cache.NeedMemCacheAttribute.CacheMode">
+            <summary>
+            缓存处理模式
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Cache.NeedMemCacheAttribute.Expiry">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Cache.CacheMode">
+            <summary>
+            缓存处理模式
+            </summary>
+        </member>
+        <member name="F:Titan.Common.Cache.CacheMode.AllValue">
+            <summary>
+            全表缓存
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Titan.Common.Log</name>
+    </assembly>
+    <members>
+        <member name="T:Titan.Common.Log.BaseLogHandler`1">
+            <summary>
+            日志处理类的基类
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.BaseLogHandler`1.LoadConfig">
+            <summary>
+            Loads the config.
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.BaseLogHandler`1.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Titan.Common.Log.BaseLogHandler`1"/> class.
+            </summary>
+            <param name="loggerConfig">The logger config.</param>
+        </member>
+        <member name="M:Titan.Common.Log.BaseLogHandler`1.WriteLog">
+            <summary>
+            写入日志
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Log.BaseLogHandler`1.LoggerConfig">
+            <summary>
+            Gets or sets the logger config.
+            </summary>
+            <value>The logger config.</value>
+        </member>
+        <member name="P:Titan.Common.Log.BaseLogHandler`1.Log">
+            <summary>
+            日志对象
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Log.ServiceCallLogHandler">
+            <summary>
+            服务调用日志处理器
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.ServiceCallLogHandler.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Titan.Common.Log.ServiceCallLogHandler"/> class.
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Log.MonitorLogHandler">
+            <summary>
+            系统监测日志处理器
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.MonitorLogHandler.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Titan.Common.Log.MonitorLogHandler"/> class.
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.MonitorLogHandler.#ctor(Titan.Log.DataAccess.Entities.MonitorMember)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Titan.Common.Log.MonitorLogHandler"/> class.
+            </summary>
+            <param name="member">The member.</param>
+        </member>
+        <member name="M:Titan.Common.Log.MonitorLogHandler.WriteLog">
+            <summary>
+            Writes the log.
+            </summary>
+        </member>
+        <member name="P:Titan.Common.Log.MonitorLogHandler.Log">
+            <summary>
+            日志对象
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Log.UserOperateLogHandler">
+            <summary>
+            用户操作日志处理器
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.UserOperateLogHandler.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.UserOperateLogHandler.ActionExecuted">
+            <summary>
+            Action执行完毕
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.UserOperateLogHandler.ResultExecuted(System.Web.HttpResponseBase)">
+            <summary>
+            Action的返回结果执行完毕
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.UserOperateLogHandler.HandlerException(System.Exception)">
+            <summary>
+            出现了异常
+            </summary>
+        </member>
+        <member name="T:Titan.Common.Log.ExceptionLogHandler">
+            <summary>
+            异常日志处理器
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.ExceptionLogHandler.#ctor(System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Titan.Common.Log.ExceptionLogHandler.#ctor(System.Exception,System.Guid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="exception"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:Titan.Common.Log.ExceptionLogHandler.#ctor(System.Exception,System.String,System.Guid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="exception"></param>
+            <param name="currentUserLogonName"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:Titan.Common.Log.ExceptionLogHandler.WriteLog">
+            <summary>
+            Writes the log.
+            </summary>
+        </member>
+        <member name="M:Titan.Common.Log.ExceptionLogHandler.GetSendToAddress">
+            <summary>
+            获取要发送的邮件地址
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
